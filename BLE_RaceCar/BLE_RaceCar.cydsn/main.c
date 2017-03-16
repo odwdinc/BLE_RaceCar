@@ -29,20 +29,17 @@ CYBLE_UUID16 serviceUuid = 0x0000u;
 CYBLE_GAP_BD_ADDR_T peerAddr[CYBLE_MAX_ADV_DEVICES];
 
 uint8 sendFlag = 1;
-uint8 MotorFlag = 0;
 
-uint8 LeftMotorData[2] = {0x00, 0x00};
-uint8 RightMotorData[2] = {0x00, 0x00};
+uint8 MotorData[2] = {0x00, 0x00};
 
-uint8 LeftMotorDataPending[2] = {0x00, 0x00};
-uint8 RightMotorDataPending[2] = {0x00, 0x00};
-
-CYBLE_GATTC_READ_REQ_T leftHandld = 0x000B;
-CYBLE_GATTC_READ_REQ_T RightHandld = 0x000D;
+uint8 MotorDataPending[2] = {0x00, 0x00};
 
 
-CYBLE_GATTC_WRITE_REQ_T     LeftMotorReqParam   = {{(uint8*)LeftMotorData, 2, 2},0};
-CYBLE_GATTC_WRITE_REQ_T     RightMotorReqParam   = {{(uint8*)RightMotorData, 2, 2},0};
+CYBLE_GATTC_READ_REQ_T MotorHandld = 0x000B;
+
+
+CYBLE_GATTC_WRITE_REQ_T     MotorReqParam   = {{(uint8*)MotorData, 2, 2},0};
+
 
 /*******************************************************************************
 * Function Name: AppCallBack()
@@ -311,13 +308,13 @@ void AppCallBack(uint32 event, void* eventParam)
             
         case CYBLE_EVT_GATTC_DISCOVERY_COMPLETE:
             DBG_PRINTF("CYBLE_EVT_GATTC_DISCOVERY_COMPLETE\r\n");
-            LeftMotorReqParam.attrHandle = leftHandld;
-            RightMotorReqParam.attrHandle = RightHandld;
+            MotorReqParam.attrHandle = MotorHandld;
             //CyBle_GattcReadCharacteristicValue(cyBle_connHandle,leftHandld);
             
-            LeftMotorReqParam.value.val[0] = 20u;
+            MotorReqParam.value.val[0] = 0u;
+            MotorReqParam.value.val[1] = 0u;
             
-            CyBle_GattcWriteCharacteristicValue(cyBle_connHandle,(CYBLE_GATTC_WRITE_REQ_T *)(&LeftMotorReqParam));
+            CyBle_GattcWriteCharacteristicValue(cyBle_connHandle,(CYBLE_GATTC_WRITE_REQ_T *)(&MotorReqParam));
             
             /* Send request to read the body sensor location char. 
             //apiResult = HrscReadBodySensorLocation();
@@ -419,26 +416,13 @@ void StartDiscovery(void)
 }
 
 
-void sendLeft(uint8 speed, uint8 dir){
+void sendMotor(uint8 left, uint8 right){
     if(sendFlag == 0){
-        if(speed != LeftMotorReqParam.value.val[0] || dir != LeftMotorReqParam.value.val[1]){
-            LeftMotorReqParam.value.val[0] = speed;
-            LeftMotorReqParam.value.val[1] = dir;
-            CyBle_GattcWriteCharacteristicValue(cyBle_connHandle,(CYBLE_GATTC_WRITE_REQ_T *)(&LeftMotorReqParam));
+        if(left != MotorReqParam.value.val[0] || right != MotorReqParam.value.val[1]){
+            MotorReqParam.value.val[0] = left;
+            MotorReqParam.value.val[1] = right;
+            CyBle_GattcWriteCharacteristicValue(cyBle_connHandle,(CYBLE_GATTC_WRITE_REQ_T *)(&MotorReqParam));
             sendFlag = 1;
-        }
-    }
-}
-
-
-void sendRight(uint8 speed, uint8 dir){
-    if(sendFlag == 0){
-        
-        if(speed != RightMotorReqParam.value.val[0] || dir != RightMotorReqParam.value.val[1]){
-            RightMotorReqParam.value.val[0] = speed;
-            RightMotorReqParam.value.val[1] = dir;
-            CyBle_GattcWriteCharacteristicValue(cyBle_connHandle,(CYBLE_GATTC_WRITE_REQ_T *)(&RightMotorReqParam));
-            sendFlag =1;
         }
     }
 }
@@ -450,71 +434,17 @@ void ProcessEventsMovments(){
         uint16 ch1 = ADC_SAR_Joy_GetResult16(0);
         uint16 ch2 = ADC_SAR_Joy_GetResult16(1);
         
-        uint16 centerCh1 = 262;
-        uint16 centerCh2 = 262;
-        uint16 speed = (uint16)(510.0/2040.0 * ch1);
-        uint16 speedR ;
-        uint16 speedL ;
+        uint8 centerCh1 = 131;
+        uint8 centerCh2 = 131;
+        uint8 left = (uint8)(255.0/2040.0 * ch1);
+        uint8 right =(uint8)(255.0/2040.0 * ch2);
         
-        uint16 dir = (uint16)(510.0/2040.0 * ch2);
         
-        //printf("ADC ch2: %d dir %d   ",ch2,dir);
-        
-        if(speed > centerCh1+5){
-            speed = speed - centerCh1;
-            RightMotorDataPending[1] = 1;
-            LeftMotorDataPending[1] = 1;
-        }else if(speed < centerCh1-5){
-            speed = centerCh1 - speed;
-            RightMotorDataPending[1] = 2;
-            LeftMotorDataPending[1] = 2;
+        if(left > centerCh1+2 || left < centerCh1-2 || right > centerCh2+2 || right < centerCh2-2){ 
+            printf("right : %d, Left: %d\r\n",left,right);
+            sendMotor(left,right);
         }else{
-            speed = 0;
-            RightMotorDataPending[1] = 0;
-            LeftMotorDataPending[1] = 0;
-        }
-        speedR = speed;
-        speedL = speed;
-        
-            
-            
-        if(dir > centerCh2+5){
-            dir = dir - centerCh2;
-            if(dir > 254)dir = 254;
-            speedL -= dir;
-            speedR += dir;
-            RightMotorDataPending[1] = 2;
-            LeftMotorDataPending[1] = 1;
-            
-        }else if(dir < centerCh2-5){
-            dir = centerCh2 - dir;
-            if(dir > 254)dir = 254;
-            speedL += dir;
-            speedR -= dir;
-            RightMotorDataPending[1] = 1;
-            LeftMotorDataPending[1] = 2;
-        }else{
-            dir = 0;
-        }
-       
-        if(speedL > 254)speedL = 254;
-        if(speedR > 254)speedR = 254;  
-        
-        
-        RightMotorDataPending[0] = (uint8)speedR;
-        LeftMotorDataPending[0] = (uint8)speedL;
-        
-        
-        
-        //printf("LeftMotor: %d, RightMotor: %d\r\n",(uint8)speedL,(uint8)speedR);
-        
-            
-        if(MotorFlag == 0){
-            MotorFlag = 1;
-            sendRight(RightMotorDataPending[0], RightMotorDataPending[1]);
-        }else{
-            MotorFlag =0;
-            sendLeft(LeftMotorDataPending[0], LeftMotorDataPending[1]);
+            sendMotor(centerCh1,centerCh2);
         }
     }
 }

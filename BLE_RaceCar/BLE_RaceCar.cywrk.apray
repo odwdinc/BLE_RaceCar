@@ -173,7 +173,74 @@
 <v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cymetadata.c</v>
 <v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\project.h</v>
 </ExpandedNodeIds>
-<VisibleNodeIds />
+<VisibleNodeIds>
+<v>BLE_RaceCar</v>
+<v>BLE_RaceCar\BLE_RaceCar</v>
+<v>BLE_RaceCar\BLE_RaceCar\TopDesign</v>
+<v>BLE_RaceCar\BLE_RaceCar\BLE_RaceCar.cydwr</v>
+<v>BLE_RaceCar\BLE_RaceCar\BLE_RaceCar.cydwr\Pins</v>
+<v>BLE_RaceCar\BLE_RaceCar\BLE_RaceCar.cydwr\Analog</v>
+<v>BLE_RaceCar\BLE_RaceCar\BLE_RaceCar.cydwr\Clocks</v>
+<v>BLE_RaceCar\BLE_RaceCar\BLE_RaceCar.cydwr\Interrupts</v>
+<v>BLE_RaceCar\BLE_RaceCar\BLE_RaceCar.cydwr\System</v>
+<v>BLE_RaceCar\BLE_RaceCar\BLE_RaceCar.cydwr\Directives</v>
+<v>BLE_RaceCar\BLE_RaceCar\BLE_RaceCar.cydwr\Flash Security</v>
+<v>BLE_RaceCar\BLE_RaceCar\Header Files</v>
+<v>BLE_RaceCar\BLE_RaceCar\Header Files\cyapicallbacks.h</v>
+<v>BLE_RaceCar\BLE_RaceCar\Header Files\debug.h</v>
+<v>BLE_RaceCar\BLE_RaceCar\Header Files\main.h</v>
+<v>BLE_RaceCar\BLE_RaceCar\Source Files</v>
+<v>BLE_RaceCar\BLE_RaceCar\Source Files\debug.c</v>
+<v>BLE_RaceCar\BLE_RaceCar\Source Files\main.c</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\ADC_SAR_Joy</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\ADC_SAR_Joy\ADC_SAR_Joy.c</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\ADC_SAR_Joy\ADC_SAR_Joy.h</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\ADC_SAR_Joy\ADC_SAR_Joy_INT.c</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\ADC_SAR_Joy\ADC_SAR_Joy_PM.c</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\ADC_SAR_Joy_intClock</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\ADC_SAR_Joy_intClock\ADC_SAR_Joy_intClock.c</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\ADC_SAR_Joy_intClock\ADC_SAR_Joy_intClock.h</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\ADC_SAR_Joy_IRQ</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\ADC_SAR_Joy_IRQ\ADC_SAR_Joy_IRQ.c</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\ADC_SAR_Joy_IRQ\ADC_SAR_Joy_IRQ.h</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\cm0gcc.ld</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\Cm0Iar.icf</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\Cm0RealView.scat</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\Cm0Start.c</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\cmsis_armcc.h</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\cmsis_gcc.h</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\core_cm0.h</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\core_cm0_psoc4.h</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\core_cmFunc.h</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\core_cmInstr.h</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\CyBootAsmGnu.s</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\CyBootAsmIar.s</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\CyBootAsmRv.s</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\CyFlash.c</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\CyFlash.h</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\CyLib.c</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\CyLib.h</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\cypins.h</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\cyPm.c</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\cyPm.h</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\cytypes.h</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_boot\cyutils.c</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_lfclk</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_lfclk\CyLFClk.c</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\cy_lfclk\CyLFClk.h</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\CYBLE</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\CYBLE\CYBLE.c</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\CYBLE\CYBLE.h</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\CYBLE\CYBLE_custom.c</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\CYBLE\CYBLE_custom.h</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\CYBLE\CYBLE_eventHandler.c</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\CYBLE\CYBLE_eventHandler.h</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\CYBLE\CYBLE_gatt.c</v>
+<v>BLE_RaceCar\BLE_RaceCar\Generated_Source\PSoC4\CYBLE\CYBLE_gatt.h</v>
+</VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
@@ -182,7 +249,12 @@
 <v>BLE_RaceCar\BLE_RaceCar\TopDesign</v>
 <v>BLE_RaceCar\BLE_RaceCar\TopDesign\TopDesign.cysch</v>
 </ExpandedNodeIds>
-<VisibleNodeIds />
+<VisibleNodeIds>
+<v>BLE_RaceCar</v>
+<v>BLE_RaceCar\BLE_RaceCar</v>
+<v>BLE_RaceCar\BLE_RaceCar\TopDesign</v>
+<v>BLE_RaceCar\BLE_RaceCar\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
@@ -247,7 +319,68 @@
 <v>BLE_RaceCar\BLE_RaceCar\BLE_RaceCar.rpt</v>
 <v>BLE_RaceCar\BLE_RaceCar\BLE_RaceCar_timing.html</v>
 </ExpandedNodeIds>
-<VisibleNodeIds />
+<VisibleNodeIds>
+<v>BLE_RaceCar</v>
+<v>BLE_RaceCar\BLE_RaceCar</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Joy.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Joy_INT.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Joy_intClock.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Joy_IRQ.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Joy_PM.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\Cm0Start.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\CYBLE.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\CYBLE_bless_isr.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\CYBLE_custom.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\CYBLE_eventHandler.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\CYBLE_gatt.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\CYBLE_HAL_INT.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\CYBLE_HAL_PVT.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\CyLFClk.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\debug.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\Disconnect_LED.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\Disconnect_LED_PM.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\Notification_LED.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\Notification_LED_PM.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\Pin_1.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\Pin_1_PM.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\Pin_2.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\Pin_2_PM.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\Scanning_LED.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\Scanning_LED_PM.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\SW2.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\SW2_PM.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_DEB.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_DEB_BOOT.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_DEB_PM.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_DEB_rx.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_DEB_rx_PM.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_DEB_SCBCLK.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_DEB_SPI_UART.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_DEB_SPI_UART_INT.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_DEB_tx.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_DEB_tx_PM.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_DEB_UART.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\UART_DEB_UART_BOOT.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\Listing Files\Wakeup_Interrupt.lst</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\BLE_RaceCar.elf</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\BLE_RaceCar.hex</v>
+<v>BLE_RaceCar\BLE_RaceCar\CortexM0\ARM_GCC_493\Debug\BLE_RaceCar.map</v>
+<v>BLE_RaceCar\BLE_RaceCar\BLE_RaceCar.gpdsc</v>
+<v>BLE_RaceCar\BLE_RaceCar\BLE_RaceCar.rpt</v>
+<v>BLE_RaceCar\BLE_RaceCar\BLE_RaceCar_timing.html</v>
+</VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
 <TreeKeysV2>
@@ -277,7 +410,28 @@
 <v>BLE_RaceCar\BLE_RaceCar\SCB_P4_v3_20.pdf</v>
 <v>BLE_RaceCar\BLE_RaceCar\SwitchSPST_v1_0.pdf</v>
 </ExpandedNodeIds>
-<VisibleNodeIds />
+<VisibleNodeIds>
+<v>BLE_RaceCar</v>
+<v>BLE_RaceCar\BLE_RaceCar</v>
+<v>BLE_RaceCar\BLE_RaceCar\PSoC 4 Architecture TRM</v>
+<v>BLE_RaceCar\BLE_RaceCar\PSoC 4200 BLE Family Datasheet</v>
+<v>BLE_RaceCar\BLE_RaceCar\System Reference Guides</v>
+<v>BLE_RaceCar\BLE_RaceCar\System Reference Guides\cy_boot_v5_50</v>
+<v>BLE_RaceCar\BLE_RaceCar\System Reference Guides\cy_lfclk_v1_10</v>
+<v>BLE_RaceCar\BLE_RaceCar\ADC_SAR_SEQ_P4_v2_40.pdf</v>
+<v>BLE_RaceCar\BLE_RaceCar\BLE_v3_30.pdf</v>
+<v>BLE_RaceCar\BLE_RaceCar\cy_isr_v1_70.pdf</v>
+<v>BLE_RaceCar\BLE_RaceCar\cy_pins_v2_20</v>
+<v>BLE_RaceCar\BLE_RaceCar\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>BLE_RaceCar\BLE_RaceCar\Gnd_v1_0.pdf</v>
+<v>BLE_RaceCar\BLE_RaceCar\LED_v1_0</v>
+<v>BLE_RaceCar\BLE_RaceCar\LED_v1_0\LED_v1_0.pdf</v>
+<v>BLE_RaceCar\BLE_RaceCar\Power_v1_0.pdf</v>
+<v>BLE_RaceCar\BLE_RaceCar\Resistor_v1_0</v>
+<v>BLE_RaceCar\BLE_RaceCar\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>BLE_RaceCar\BLE_RaceCar\SCB_P4_v3_20.pdf</v>
+<v>BLE_RaceCar\BLE_RaceCar\SwitchSPST_v1_0.pdf</v>
+</VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
 </CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
@@ -302,7 +456,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="2669, 1035" SelectedTabbedMdiWindow="c0f17f83-79c7-438c-8d34-91dce8c2c533"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="91c9af04-fbee-4661-9a3e-1cbf4dcc16e9" /><DocumentWindow Key="d00889d6-24e9-49f3-b39a-412da0d705d5" Guid="c5825c1b-007f-4a4c-b657-2b069f405ed5" /><DocumentWindow Key="a4f55971-f848-4901-96af-decbe08b4eaf" Guid="5201b7df-3cfd-4707-969e-625ad3121519" /><DocumentWindow Key="f70c3b85-9797-403f-a1b1-269f1abad15c" Guid="c0f17f83-79c7-438c-8d34-91dce8c2c533" /><DocumentWindow Key="5560ac0c-2767-4616-9621-761a2b78bb9b" Guid="658a2b5d-a87f-4362-b2d4-6b643b2a6a75" /><DocumentWindow Key="7d6b8b68-73eb-440e-b65c-57b6856f7a60" Guid="8020e40f-43b6-429a-a2cd-80d4ca928580" /><DocumentWindow Key="d11c214c-3c3d-44c5-a49b-2e1e3c3bd4b4" Guid="42b3e3b3-b812-4fae-8e87-133edcff415f" /><DocumentWindow Key="26d28ee9-169a-47d0-b0bc-c4537f660c3c" Guid="e48ee39c-f524-46b8-8d6f-d3ddf1a6fcd9" /><DocumentWindow Key="111eb76a-45fe-450b-aa6d-0813cc9807b2" Guid="c2197f0e-80af-44ac-b978-6b0774bcd0c8" /><DocumentWindow Key="cbba617b-a846-4fb9-bfcd-b7673f7c13ef" Guid="85dbc46c-e7a6-4b3e-9f22-9df4f09a884b" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="2669, 1035" SelectedTabbedMdiWindow="b828edd3-a111-438e-aac9-9fdc87708ad6"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="91c9af04-fbee-4661-9a3e-1cbf4dcc16e9" /><DocumentWindow Key="236398d4-2de9-4c60-95a4-13d7951fb3a3" Guid="439c149f-0699-41c0-ae89-b32a64b99c1b" /><DocumentWindow Key="e5a62169-5a7d-42b5-99f6-36c038824b08" Guid="3dd76bd5-ba6d-4bee-b378-7e775954ad0f" /><DocumentWindow Key="9e5b4fdd-2dca-464a-ab05-fd63159bbb1f" Guid="b828edd3-a111-438e-aac9-9fdc87708ad6" /><DocumentWindow Key="006eaf80-1f27-4354-b41c-51e84fd06e32" Guid="c8ea7c4b-56b9-45a0-bc05-ef74a2ef41f6" /><DocumentWindow Key="f37a795f-a4f5-4463-a314-dc5fb7e8315b" Guid="c58e87d8-0a43-40fc-be4e-c2619f690ae7" /><DocumentWindow Key="6870dc32-3933-4917-8cd1-2c962b4108f0" Guid="5a2b9350-00ea-4e85-af97-9585fe1f4cf8" /><DocumentWindow Key="f90f39d1-3534-4776-bac5-b46a833a522f" Guid="d9c4af43-1238-4134-953f-e38e6259a208" /><DocumentWindow Key="05821392-21df-4791-9dc7-f67a3ba2012b" Guid="85f1ad80-a5a5-4227-a0b8-562fbc2d6989" /><DocumentWindow Key="036dc1ba-b908-41ae-8e93-96ff22513039" Guid="47084944-ddec-4379-b2d7-6e30d82f46c7" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

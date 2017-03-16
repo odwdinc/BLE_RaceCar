@@ -7,8 +7,7 @@
 
 BLEPeripheral blePeripheral; // create peripheral instance
 BLEService MotorService("19B10010-E8F2-537E-4F6C-D104768A1214"); // create service
-BLECharacteristic LeftMotorCharacteristic("19B10011-E8F2-537E-4F6C-D104768A1214", BLERead | BLEWrite,2);
-BLECharacteristic RightMotorCharacteristic("19B10012-E8F2-537E-4F6C-D104768A1214", BLERead | BLEWrite,2);
+BLECharacteristic MotorCharacteristic("19B10011-E8F2-537E-4F6C-D104768A1214", BLERead | BLEWrite,2);
 
 
 int pwm_a = 3;   //PWM control for motor outputs 1 and 2 is on digital pin 3
@@ -17,6 +16,23 @@ int dir_a = 12;  //direction control for motor outputs 1 and 2 is on digital pin
 int dir_b = 13;  //direction control for motor outputs 3 and 4 is on digital pin 13
 int val = 0;     //value for fade
 
+float rawLeft;
+float rawRight;
+
+float MaxJoy = 255;
+float MinJoy = 0;
+
+float MaxValue = 255;
+float MinValue = 0;
+
+float RawLeft;
+float RawRight;
+
+float ValLeft;
+float ValRight;
+
+bool invXL = false;
+bool invXR = false;
 
 
 
@@ -39,26 +55,15 @@ void setup() {
 
   // add service and characteristics
   blePeripheral.addAttribute(MotorService);
-  blePeripheral.addAttribute(LeftMotorCharacteristic);
-  blePeripheral.addAttribute(RightMotorCharacteristic);
+  blePeripheral.addAttribute(MotorCharacteristic);
 
-  LeftMotorCharacteristic.setValue(MotorData,2);
-  RightMotorCharacteristic.setValue(MotorData,2);
-
+  MotorCharacteristic.setValue(MotorData,2);
   // advertise the service
   blePeripheral.begin();
 
   Serial.println("Bluetooth device active, waiting for connections...");
+  MotorCharacteristic.setEventHandler(BLEWritten, MotorCharacteristicWritten);
 
-    // assign event handlers for characteristic
-  LeftMotorCharacteristic.setEventHandler(BLEWritten, LeftMotorCharacteristicWritten);
-  RightMotorCharacteristic.setEventHandler(BLEWritten, RightMotorCharacteristicWritten);
-
-  
-  forw();         //Set Motors to go forward Note : No pwm is defined with the for function, so that fade in and out works
-  fadein();       //fade in from 0-255
-  fadeout();      //Fade out from 255-0
-  stopped();      // stop for 2 seconds
 }
 
 void loop() {
@@ -66,33 +71,32 @@ void loop() {
   blePeripheral.poll();
 }
 
-void RightMotorCharacteristicWritten(BLECentral& central, BLECharacteristic& characteristic){
+void MotorCharacteristicWritten(BLECentral& central, BLECharacteristic& characteristic){
     Serial.println("Right Motor Characteristic Written");
+    CalculateTankDrive((float)characteristic.value()[0],(float)characteristic.value()[1]);
+    
+    Serial.print("Val: ");
+    Serial.print(ValLeft);
+    Serial.print(" : ");
+    Serial.print(ValRight);
+    Serial.println();
 
-  if(characteristic.value()[1] == 1){
-    aforw();
-  }else if (characteristic.value()[1] == 2){
-    aback();
-  }else{
-    astop();
-  }
-  apwm(characteristic.value()[0]);
+    if(ValLeft > 0){
+      aforw();
+    }else{
+      aback();
+    }
+    if(ValRight > 0){
+      bforw();
+    }else{
+      bback();
+    }
+
+
+    apwm(abs(ValLeft));
+    bpwm(abs(ValRight));
+    
 }
-
-
-
-void LeftMotorCharacteristicWritten(BLECentral& central, BLECharacteristic& characteristic){
-  Serial.println("Left Motor Characteristic Written");
-  if(characteristic.value()[1] == 1){
-    bforw();
-  }else if (characteristic.value()[1] == 2){
-    bback();
-  }else{
-    bstop();
-  }
-  bpwm(characteristic.value()[0]);
-}
-
 //Dir Data
 void aforw() // no pwm defined
 { 
@@ -142,6 +146,54 @@ declare your pwm fade. There is also a stop function.
 */
 
 
+void CalculateTankDrive(float x, float y)
+ {
+   // first Compute the angle in deg
+   // First hypotenuse
+   float z = sqrt(x * x + y * y);
+
+   // angle in radians
+   float rad = acos(abs(x) / z);
+
+   // Cataer for NaN values
+   if(isnan(rad) == true){ rad=0; }
+
+   // and in degrees
+   float angle = rad * 180 / PI;
+
+   // Now angle indicates the measure of turn
+   // Along a straight line, with an angle o, the turn co-efficient is same
+   // this applies for angles between 0-90, with angle 0 the co-eff is -1
+   // with angle 45, the co-efficient is 0 and with angle 90, it is 1
+
+   float tcoeff = -1 + (angle / 90) * 2;
+   float turn = tcoeff * abs(abs(y) - abs(x));
+   turn = round(turn * 100) / 100;
+
+   // And max of y or x is the movement
+   float mov = max(abs(y), abs(x));
+
+   // First and third quadrant
+   if ((x >= 0 && y >= 0) || (x < 0 && y < 0))
+   { rawLeft = mov; rawRight = turn; }
+   else
+   { rawRight = mov; rawLeft = turn; }
+
+   // Reverse polarity
+   if (y < 0){ rawLeft = 0 - rawLeft; rawRight = 0 - rawRight; }
+
+   // Update the values
+   RawLeft = rawLeft;
+   RawRight = rawRight;
+
+   // Map the values onto the defined rang
+   ValLeft = map(rawLeft, MinJoy, MaxJoy, MinValue, MaxValue);
+   ValRight = map(rawRight, MinJoy, MaxJoy, MinValue, MaxValue);
+
+   // Cater for inverse of direction if needed
+   if(invXL){ RawLeft *= -1; ValLeft = MaxValue - ValLeft; }
+   if(invXR){ RawRight *= -1; ValRight = MaxValue - ValRight; }
+ }
 
 
 
